@@ -1,32 +1,50 @@
-# Speak Ease
+# Speak Ease  
 
-Real-time web application for accurate speech recognition, tailored for patients suffering from dysarthria (speech impediment)
- 
+A **real-time web application** designed to deliver **accurate speech recognition**, specifically tailored for individuals with **dysarthria (speech impairment)**.  
 
-# Problem Statement
-Dysarthria traps thoughts in a body struggling to speak, isolating individuals from society and straining relationships. Every conversation becomes a battle, eroding confidence and independence.
+---
 
-Dysarthria severely impacts communication, affecting quality of life and independence.
-Affects millions globally, including stroke victims(41-53%), Parkinson's patients(44-88%), and those suffering from other neurological conditions
-Growing issue due to aging population and increasing neurological disorders
+## **Problem Statement**  
+Dysarthria **traps thoughts** within a body that struggles to articulate them, **isolating individuals** and making communication a constant challenge. This not only **affects relationships** but also diminishes **confidence and independence**.  
 
-This solution can significantly improve communication and quality of life for a large, under-served population, making it a crucial healthcare innovation.
+- Dysarthria significantly **impacts communication**, reducing the quality of life and autonomy.  
+- It affects **millions worldwide**, including:
+  - **41-53% of stroke survivors**
+  - **44-88% of individuals with Parkinson’s disease**
+  - People with other **neurological disorders**  
+- The **aging population** and the rise in **neurological conditions** are making this a growing concern.  
 
-## High level Solution Overview
-We will start with the state of the art end to end speech Recognition model with high accuracy. This high quality ASR model will be trained on hundreds of hours of typical or standard speech with no impairements. After we achieve high accuracy for the end to end model, then we will start fine-tuning parts of the model to an individual with speech impairement.<br>
-So our main aproach is training a base model on a large dataset of normal speech and then training a personalised model using a much smaller slurred speech dataset. We can use tranfer learning for fine tuning parts of our base model.
-# Model Architecture
-![Screenshot from 2021-10-01 20-22-07](https://user-images.githubusercontent.com/42781233/135641230-4775970a-479f-4d40-9707-6c50c9b0bb5b.png)
+This solution has the potential to **greatly enhance communication** and **quality of life** for an underserved population, positioning it as a **breakthrough healthcare innovation**.  
 
-# Base Model Performance
-The base ASR model was trained on 100 hours of Librispeech Dataset.
-- Final Epoch Average Loss: 0.46
-- Final Epoch Average CER: 0.10
-- Final Epoch Average WER: 0.11
+---
 
-# Dataset preparation
-After we train our ASR model on hundreds of hours of typical speech, we are good to go for fine-tuning our model on impaired speech. We need to collect impaired speech dataset. We build web app using django framework to do the same.
+## **High-Level Solution Overview**  
+We will develop a **state-of-the-art, end-to-end speech recognition model** with high accuracy. Initially, the model will be **trained on extensive datasets of standard speech**, ensuring high **Automatic Speech Recognition (ASR) accuracy**.  
 
-## Link to web APP:
-1. http://speech-collection.herokuapp.com/index/
-2. https://mmig.github.io/speech-to-flac/
+Once a strong base model is established, we will proceed with **fine-tuning specific components** to cater to individuals with **speech impairments**.  
+
+### **Our Approach:**
+- Train a **base model** on a **large dataset** of normal speech.
+- Use **transfer learning** to fine-tune the model on a **smaller dataset** of slurred or impaired speech.
+- Personalize the model by adapting it to **individual speakers** with speech impairments.
+
+---
+
+## **Model Architecture**  
+![Model Architecture](https://user-images.githubusercontent.com/42781233/135641230-4775970a-479f-4d40-9707-6c50c9b0bb5b.png)  
+
+---
+
+## **Base Model Performance**  
+The **base ASR model** was trained on **100 hours** of the **Librispeech Dataset**, achieving:  
+- **Final Epoch Average Loss:** **0.46**  
+- **Final Epoch Average Character Error Rate (CER):** **0.10**  
+- **Final Epoch Average Word Error Rate (WER):** **0.11**  
+
+---
+
+## **Dataset Preparation**  
+Once the ASR model is successfully trained on **hundreds of hours of typical speech**, we will proceed with **fine-tuning it for impaired speech recognition**.  
+
+To achieve this, we need to **collect a dataset of impaired speech samples**. For this purpose, we are developing a **web application using the Django framework** to facilitate **data collection and user interaction**.
+
